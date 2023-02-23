@@ -1,0 +1,162 @@
+@mixin respond($breakpoint, $type: 'min-width') {
+	@if ($type == 'down') {
+		$type: 'max-width';
+	}
+	@media only screen and (#{$type}: #{calc($breakpoint / 16)}em) {
+		@content;
+	}
+}
+
+@function pxToRem($px) {
+	@return calc($px / 10) * 1rem;
+}
+/* -------------------------------------------------------------------------- */
+/*                                  variables                                 */
+/* -------------------------------------------------------------------------- */
+:root {
+	--c-orange-50: #feeeee;
+	--c-orange-100: #facaca;
+	--c-orange-200: #f8b0b0;
+	--c-orange-300: #f58c8c;
+	--c-orange-400: #f37676;
+	--c-orange-500: #f05454;
+	--c-orange-600: #da4c4c;
+	--c-orange-700: #aa3c3c;
+	--c-orange-800: #842e2e;
+	--c-orange-900: #652323;
+	--c-light-50: #fefefe;
+	--c-light-100: #fcfcfc;
+	--c-light-200: #fafafa;
+	--c-light-300: #f8f8f8;
+	--c-light-400: #f7f7f7;
+	--c-light-500: #f5f5f5;
+	--c-light-600: #dfdfdf;
+	--c-light-700: #aeaeae;
+	--c-light-800: #878787;
+	--c-light-900: #676767;
+	--c-dark-50: #e7e7e7;
+	--c-dark-100: #b6b6b6;
+	--c-dark-200: #929292;
+	--c-dark-300: #606060;
+	--c-dark-400: #414141;
+	--c-dark-500: #121212;
+	--c-dark-600: #101010;
+	--c-dark-700: #0d0d0d;
+	--c-dark-800: #0a0a0a;
+	--c-dark-900: #080808;
+	--text-size: 1.8rem;
+	--text-base-size: 62.5%;
+	--text-scale: 1.25;
+	--text-sm: calc(var(--text-size) / var(--text-scale));
+	--text-md: calc(var(--text-size) * var(--text-scale));
+	--text-lg: calc(var(--text-md) * var(--text-scale));
+	--text-xl: calc(var(--text-lg) * var(--text-scale));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale));
+	--text-xxxl: calc(var(--text-xxl) * var(--text-scale));
+	--heading-font: 'Open Sans', sans-serif;
+	--body-font: 'Nunito', sans-serif;
+	--font-weight-r: 400;
+	--font-weight-b: 700;
+	--font-weight-xb: 800;
+	--line-height-r: 1.6;
+	--line-height-s: 1.2;
+	--glow-size: 0.6rem;
+	--tr-time: 320ms;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    base                                    */
+/* -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: var(--text-base-size);
+	box-sizing: border-box;
+}
+body {
+	font-size: var(--text-size);
+	font-family: var(--body-font);
+	font-weight: var(--font-weight-r);
+	color: var(--c-dark-500);
+	background-color: var(--c-light-500);
+	line-height: var(--line-height-r);
+	min-height: 100vh;
+}
+::selection {
+	background-color: var(--c-orange-100);
+}
+/* make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--heading-font);
+	font-weight: var(--font-weight-xb);
+	line-height: var(--line-height-s);
+}
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+a {
+	text-decoration: none;
+}
+main {
+	min-height: 100vh;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+/* -------------------------------------------------------------------------- */
+/*                                 typography                                 */
+/* -------------------------------------------------------------------------- */
+.display-4 {
+	font-size: var(--text-xxxxl);
+}
+.h1 {
+	font-size: var(--text-xxxl);
+}
+.h2 {
+	font-size: var(--text-xxl);
+}
+.h3 {
+	font-size: var(--text-xl);
+}
+.h4 {
+	font-size: var(--text-lg);
+}
+.h5 {
+	font-size: var(--text-md);
+}
+/* -------------------------------------------------------------------------- */
+/*                                    utils                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   layout                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 components                                 */
+/* -------------------------------------------------------------------------- */
