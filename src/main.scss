@@ -424,13 +424,11 @@ main {
 /* -------------------------------------------------------------------------- */
 /*                                 components                                 */
 /* -------------------------------------------------------------------------- */
-// FIXME icon margin -2
 .icon {
 	--iconSize: var(--text-size);
 	display: inline-block;
 	width: var(--iconSize);
 	height: var(--iconSize);
-	margin-bottom: pxToRem(-2);
 	&--sm {
 		--iconSize: var(--text-sm);
 	}
@@ -870,6 +868,3 @@ main {
 		--text-base-size: 68.94%; // 20px
 	}
 }
-
-// FIXME color del borde y el shadow de los botones
-// FIXME boton remove cambairlo por un div y poner dentro el boton
