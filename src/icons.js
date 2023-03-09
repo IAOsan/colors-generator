@@ -1,0 +1,10 @@
+export { ReactComponent as InfoIcon } from './assets/info-icon.svg';
+export { ReactComponent as GithubLogo } from './assets/github-icon.svg';
+export { ReactComponent as DropIcon } from './assets/drop-icon.svg';
+export { ReactComponent as CopyIcon } from './assets/copy-icon.svg';
+export { ReactComponent as MagicIcon } from './assets/magic-wand.svg';
+export { ReactComponent as PercentageIcon } from './assets/percentage-icon.svg';
+export { ReactComponent as TrashIcon } from './assets/trash-icon.svg';
+export { ReactComponent as EmptyIcon } from './assets/empty-icon.svg';
+export { ReactComponent as UpArrowIcon } from './assets/up-arrow-icon.svg';
+export { ReactComponent as LinkIcon } from './assets/link-icon.svg';
