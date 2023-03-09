@@ -8,7 +8,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "vitest",
-		"test:once": "vitest --run"
+		"test:once": "vitest --run",
+		"server": "browser-sync start --server 'docs' --files 'docs'"
 	},
 	"dependencies": {
 		"color-contrast-checker": "2.1.0",
